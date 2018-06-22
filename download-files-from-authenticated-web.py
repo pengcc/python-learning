@@ -11,7 +11,7 @@ URL = "https://www.YOUR_PAPE.com/example"
 URL_base = "https://www.YOUR_PAPE.com/"
 
 # find out your parameters used for auth
-auth = {
+payload = {
     'user': username,
     'pass': password
 }
@@ -21,8 +21,8 @@ auth_data = {
     'param12': 'YOUR_VALUE2',
     'param3': 'YOUR_VALUE3'
 }
-# Create payload
-payload = auth.append(auth_data)
+# Update payload
+payload.update(auth_data)
 
 def get_container_list_by_soup(html_text, _parser="html.parser"):
     """
